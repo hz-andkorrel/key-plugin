@@ -1,0 +1,5 @@
+services:
+  room-key-listener:
+    build: .
+    environment:
+      - REDIS_ADDR=host.docker.internal:6379
