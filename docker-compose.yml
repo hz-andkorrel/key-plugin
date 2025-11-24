@@ -3,3 +3,7 @@ services:
     build: .
     environment:
       - REDIS_ADDR=host.docker.internal:6379
+    volumes:
+      - ./index.html:/app/index.html  # Mount HTML for development purposes
+    ports:
+      - "8081:8080" # Temporary port to use for iFrame in frontend
